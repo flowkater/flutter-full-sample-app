@@ -25,32 +25,6 @@ class RestaurantDetailModel extends RestaurantModel {
 
   factory RestaurantDetailModel.fromJson(Map<String, dynamic> json) =>
       _$RestaurantDetailModelFromJson(json);
-
-  // factory RestaurantDetailModel.fromJson({
-  //   required Map<String, dynamic> json,
-  // }) {
-  //   return RestaurantDetailModel(
-  //     id: json['id'],
-  //     name: json['name'],
-  //     thumbUrl: '$hostIp${json['thumbUrl']}',
-  //     tags: List<String>.from(json['tags']),
-  //     priceRange: RestaurantPriceRange.values.firstWhere(
-  //       (e) => e.name == json['priceRange'],
-  //     ),
-  //     ratings: json['ratings'],
-  //     ratingsCount: json['ratingsCount'],
-  //     deliveryTime: json['deliveryTime'],
-  //     deliveryFee: json['deliveryFee'],
-  //     detail: json['detail'],
-  //     products: json['products']
-  //         .map<RestaurantProductModel>(
-  //           (e) => RestaurantProductModel.fromJson(
-  //             json: e,
-  //           ),
-  //         )
-  //         .toList(),
-  //   );
-  // }
 }
 
 @JsonSerializable()
@@ -74,15 +48,4 @@ class RestaurantProductModel {
 
   factory RestaurantProductModel.fromJson(Map<String, dynamic> json) =>
       _$RestaurantProductModelFromJson(json);
-  // factory RestaurantProductModel.fromJson({
-  //   required Map<String, dynamic> json,
-  // }) {
-  //   return RestaurantProductModel(
-  //     id: json['id'],
-  //     name: json['name'],
-  //     imgUrl: '$hostIp${json['imgUrl']}',
-  //     detail: json['detail'],
-  //     price: json['price'],
-  //   );
-  // }
 }
